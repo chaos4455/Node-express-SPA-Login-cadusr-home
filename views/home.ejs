@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Usuário - SAP Fiori Style</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <style>
+        body {
+            background-color: #f9f9f9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .navbar {
+            background-color: #6a1b9a; /* Roxo escuro */
+        }
+        .navbar-brand, .navbar-nav .nav-link {
+            color: #ffffff !important;
+        }
+        .sidebar {
+            height: 100vh;
+            background-color: #8e24aa; /* Lilás escuro */
+            padding-top: 20px;
+        }
+        .sidebar .nav-link {
+            color: #ffffff;
+        }
+        .sidebar .nav-link:hover {
+            background-color: #7b1fa2;
+        }
+        .card {
+            transition: transform 0.2s, box-shadow 0.2s;
+            border-radius: 10px;
+        }
+        .card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        .icon {
+            font-size: 3rem;
+            color: #6a1b9a;
+        }
+        .footer {
+            background-color: #6a1b9a;
+            color: #ffffff;
+            text-align: center;
+            padding: 15px 0;
+        }
+        .social-icons a {
+            color: #ffffff;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Sistema Clube de Membros</a>
+            <div class="ms-auto d-flex align-items-center">
+                <span class="text-white me-3">Olá, <strong><%= userName %></strong> 😊</span>
+                <a href="/settings" class="btn btn-outline-light me-2">Configurações</a>
+                <a href="/logout" class="btn btn-outline-light">Sair</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="d-flex">
+        <div class="sidebar flex-shrink-0 p-3">
+            <h5 class="text-center text-white">Menu</h5>
+            <nav class="nav flex-column">
+                <a class="nav-link" href="/dashboard"><i class="fas fa-home"></i> Dashboard</a>
+                <a class="nav-link" href="/compras"><i class="fas fa-shopping-cart"></i> Compras</a>
+                <a class="nav-link" href="/promocoes"><i class="fas fa-tags"></i> Promoções</a>
+                <a class="nav-link" href="/cupons"><i class="fas fa-percent"></i> Cupons</a>
+                <a class="nav-link" href="/notificacoes"><i class="fas fa-bell"></i> Notificações</a>
+                <a class="nav-link" href="/recomendacoes"><i class="fas fa-star"></i> Recomendações</a>
+            </nav>
+        </div>
+
+        <div class="container my-5">
+            <div class="row g-4">
+                <!-- Cartões de Conteúdo -->
+                <div class="col-md-4">
+                    <div class="card text-center shadow-lg">
+                        <div class="card-body">
+                            <div class="icon"><i class="fas fa-shopping-cart"></i></div>
+                            <h5 class="card-title">Histórico de Compras</h5>
+                            <p class="card-text">Visualize suas compras anteriores e acompanhe seus gastos.</p>
+                            <a href="/historico" class="btn btn-primary">Ver Histórico</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card text-center shadow-lg">
+                        <div class="card-body">
+                            <div class="icon"><i class="fas fa-tags"></i></div>
+                            <h5 class="card-title">Promoções Atuais</h5>
+                            <p class="card-text">Aproveite as melhores ofertas disponíveis agora!</p>
+                            <a href="/promocoes" class="btn btn-primary">Ver Promoções</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card text-center shadow-lg">
+                        <div class="card-body">
+                            <div class="icon"><i class="fas fa-percent"></i></div>
+                            <h5 class="card-title">Meus Cupons</h5>
+                            <p class="card-text">Utilize seus cupons para obter descontos em compras.</p>
+                            <a href="/cupons" class="btn btn-primary">Usar Cupons</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4 mt-4">
+                <div class="col-md-6">
+                    <div class="card text-center shadow-lg">
+                        <div class="card-body">
+                            <div class="icon"><i class="fas fa-bell"></i></div>
+                            <h5 class="card-title">Notificações</h5>
+                            <p class="card-text">Fique por dentro das últimas atualizações e ofertas.</p>
+                            <a href="/notificacoes" class="btn btn-primary">Ver Notificações</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card text-center shadow-lg">
+                        <div class="card-body">
+                            <div class="icon"><i class="fas fa-star"></i></div>
+                            <h5 class="card-title">Recomendações</h5>
+                            <p class="card-text">Descubra produtos que você pode gostar com base nas suas compras.</p>
+                            <a href="/recomendacoes" class="btn btn-primary">Ver Recomendações</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col text-center">
+                    <h6 class="text-muted">Siga-nos nas redes sociais</h6>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Sistema Clube de Membros. Todos os direitos reservados. 
+            <a href="#" style="color: #ffffff;">Política de Privacidade</a> | 
+            <a href="#" style="color: #ffffff;">Desinscrever-se</a>
+        </p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Sistema Base</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* Custom styles */
+        .card {
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: scale(1.02);
+        }
+        .error {
+            color: #E3342F; /* Cor vermelha para mensagens de erro */
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-b from-white to-purple-100 font-sans">
+
+    <!-- Header -->
+    <header class="bg-purple-600 shadow-md">
+        <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center">
+                <i class="fas fa-user-circle text-2xl text-white mr-2"></i>
+                <h1 class="text-2xl text-white font-bold">Login ao Sistema 🎤</h1>
+            </div>
+            <nav>
+                <a href="/" class="text-white mx-2 hover:text-gray-200">Início</a>
+                <a href="#" class="text-white mx-2 hover:text-gray-200">Sobre</a>
+                <a href="#" class="text-white mx-2 hover:text-gray-200">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Container principal -->
+    <div class="container mx-auto px-6 py-12">
+        <div class="card bg-white shadow-lg rounded-lg p-6 w-full max-w-md mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-6">Entrar na sua conta</h2>
+            <form id="loginForm" onsubmit="return handleLogin(event)">
+                <div class="mb-4">
+                    <label for="email" class="block text-sm font-medium text-gray-700">E-mail</label>
+                    <input type="email" id="email" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-purple-500 focus:ring-purple-500" placeholder="Digite seu e-mail">
+                    <p id="emailError" class="error hidden text-xs mt-1">Por favor, insira um e-mail válido.</p>
+                </div>
+                <div class="mb-6">
+                    <label for="password" class="block text-sm font-medium text-gray-700">Senha</label>
+                    <input type="password" id="password" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-purple-500 focus:ring-purple-500" placeholder="Digite sua senha">
+                    <p id="passwordError" class="error hidden text-xs mt-1">A senha deve ter pelo menos 6 caracteres.</p>
+                </div>
+                <button type="submit" class="w-full bg-purple-600 text-white font-bold py-2 rounded hover:bg-purple-700 transition duration-200">Entrar</button>
+                <p class="mt-4 text-center text-sm text-gray-600">Não tem uma conta? <a href="/register" class="text-purple-600 hover:underline">Registrar</a></p>
+                <p class="mt-2 text-center text-sm text-gray-600">Esqueceu sua senha? <a href="#" class="text-purple-600 hover:underline">Recuperar Senha</a></p>
+            </form>
+            <div id="feedback" class="hidden text-red-600 text-center mt-4"></div>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="bg-gray-100 py-4">
+        <div class="container mx-auto text-center">
+            <p class="text-gray-600 text-sm">&copy; 2024 Sistema Base. Todos os direitos reservados. <a href="#" class="text-purple-600 hover:underline">Política de Privacidade</a></p>
+        </div>
+    </footer>
+
+    <script>
+        function handleLogin(event) {
+            event.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            let valid = true;
+
+            // Resetar mensagens de erro
+            document.getElementById('emailError').classList.add('hidden');
+            document.getElementById('passwordError').classList.add('hidden');
+            document.getElementById('feedback').classList.add('hidden');
+
+            // Validação simples
+            if (!email.includes('@')) {
+                document.getElementById('emailError').classList.remove('hidden');
+                valid = false;
+            }
+
+            if (password.length < 6) {
+                document.getElementById('passwordError').classList.remove('hidden');
+                valid = false;
+            }
+
+            // Se tudo estiver válido, simular login
+            if (valid) {
+                document.getElementById('feedback').innerText = 'Login bem-sucedido! Redirecionando...';
+                document.getElementById('feedback').classList.remove('hidden');
+                setTimeout(() => {
+                    window.location.href = '/home'; // Redirecionar após 2 segundos
+                }, 2000);
+            } else {
+                document.getElementById('feedback').innerText = 'Por favor, corrija os erros acima.';
+                document.getElementById('feedback').classList.remove('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
