@@ -10,6 +10,10 @@
 
 ## 🎯 Propósito do Projeto
 
+![chrome_OBucrvSyfa](https://github.com/user-attachments/assets/d4fc1877-29b9-4238-8240-e34746e63792)
+
+![Code_jShAqXqUhm](https://github.com/user-attachments/assets/d3911d01-b542-4b3f-82a0-6d44678c9fbd)
+
 Este repositório é um **projeto de teste** que marca minha primeira imersão no **Node.js** após **8 anos de experiência com Python**. Como parte do meu processo de **prototipagem rápida** e exploração de novas ideias, estou utilizando o **Express.js** devido à sua flexibilidade de integração com o front e back-end. O objetivo é criar um sistema simples, porém funcional, que atenda às seguintes necessidades:
 - ✅ Validação de usuários através de login
 - ✅ Registro de novos usuários
@@ -21,6 +25,25 @@ Me chamo **Elias Andrade**, um profissional com mais de **14 anos de experiênci
 - 🌐 **Administração de redes e sistemas Linux**
 - 🚀 **Automatização de processos DevOps**
 - 🛠️ **Deploy de ambientes complexos em cloud, on-premises e containerizados**
+
+## 📇 Contato e Informações Pessoais
+
+### Elias Andrade
+
+🔧 Profissional de **Infraestrutura de TI** com mais de 14 anos de experiência, especializado em **Administração de Redes**, **Linux**, **DevOps** e **Automação de Processos**. Atualmente focado em prototipagem rápida com **Node.js** e **Express.js**, explorando novas ideias em projetos de **microserviços**, desenvolvimento **full stack** e **deploys automatizados**. 
+
+### 🌍 Redes Sociais e Repositórios
+- 💼 **LinkedIn**: [linkedin.com/in/itilmgf/](https://www.linkedin.com/in/itilmgf/)
+- 🧑‍💻 **GitHub**: [github.com/chaos4455](https://github.com/chaos4455)
+
+### 📬 Contato Direto
+- 📧 **Email**: [oeliasandrade@gmail.com](mailto:oeliasandrade@gmail.com)
+- 📱 **Telefone/WhatsApp**: +55 (44) 9 8859-7116
+
+---
+
+📂 Confira meu repositório mais recente em **Node.js**: [Node-express-SPA-Login-cadusr-home](https://github.com/chaos4455/Node-express-SPA-Login-cadusr-home)
+
 
 Recentemente, estou explorando o mundo de **Node.js** para prototipagem de ideias e testagem de produtos, especialmente **Express.js** por sua capacidade de lidar com microserviços e integrações front-back de forma ágil. O projeto **Node-express-SPA-Login-cadusr-home** representa uma das primeiras iniciativas de desenvolvimento full stack que estou liderando com essa nova tecnologia.
 
