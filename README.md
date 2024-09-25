@@ -63,11 +63,6 @@ Me chamo **Elias Andrade**, um profissional com mais de **14 anos de experiênci
 
 ---
 
-📂 Confira meu repositório mais recente em **Node.js**: [Node-express-SPA-Login-cadusr-home](https://github.com/chaos4455/Node-express-SPA-Login-cadusr-home)
-
-
-Recentemente, estou explorando o mundo de **Node.js** para prototipagem de ideias e testagem de produtos, especialmente **Express.js** por sua capacidade de lidar com microserviços e integrações front-back de forma ágil. O projeto **Node-express-SPA-Login-cadusr-home** representa uma das primeiras iniciativas de desenvolvimento full stack que estou liderando com essa nova tecnologia.
-
 ## ⚙️ Tecnologias Utilizadas
 
 - **Node.js** ![Node.js](https://img.shields.io/badge/-Node.js-333333?style=flat&logo=node.js)
