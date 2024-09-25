@@ -26,14 +26,12 @@ Este projeto inclui telas de **Login** e **Cadastro de Usuário** que foram insp
 ### Tela de Login 🔑
 A tela de login permite que usuários registrados façam login de maneira rápida e segura.
 
-![Login Screen](./path/to/your-login-screen.png)
 
 ![chrome_Lv9A6ZaALt](https://github.com/user-attachments/assets/3b65e0ed-765c-4e30-97d6-f895f3aa2888)
 
 ### Tela de Cadastro 📝
 A tela de cadastro possibilita que novos usuários registrem-se no sistema com facilidade.
 
-![Signup Screen](./path/to/your-signup-screen.png)
 
 ![chrome_7ChJcKY68A](https://github.com/user-attachments/assets/bee42111-7383-4a6d-bf03-4abd861bdb81)
 
